@@ -9,7 +9,7 @@ export function DefaultInput({
   id,
   type,
   labelText,
-  ...rest
+  ...props
 }: DefaultInputProps) {
   return (
     <>
@@ -18,7 +18,7 @@ export function DefaultInput({
           {labelText}
         </label>
       )}
-      <input className={styles.input} type={type} id={id} {...rest} />
+      <input className={styles.input} type={type} id={id} {...props} />
     </>
   );
 }
