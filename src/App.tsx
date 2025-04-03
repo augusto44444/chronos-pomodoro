@@ -1,3 +1,5 @@
+import './styles/global.css';
+import './styles/theme.css';
 import { PlayCircleIcon } from 'lucide-react';
 import { Container } from './components/Container';
 import { CountDown } from './components/CountDown';
@@ -6,8 +8,7 @@ import { DeffaultButton } from './components/DefaultButton';
 import { DefaultInput } from './components/DefaultInput';
 import { Logo } from './components/Logo';
 import { Menu } from './components/Menu';
-import './styles/global.css';
-import './styles/theme.css';
+import { Footer } from './components/Footer';
 
 export function App() {
   return (
@@ -47,6 +48,9 @@ export function App() {
             <DeffaultButton color='green' icon={<PlayCircleIcon />} />
           </div>
         </form>
+      </Container>
+      <Container>
+        <Footer />
       </Container>
     </>
   );
