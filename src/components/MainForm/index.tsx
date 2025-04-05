@@ -36,7 +36,6 @@ export function MainForm() {
       duration: state.config[nextCycleType],
       type: nextCycleType,
     };
-
     dispatch({ type: TaskActionTypes.START_TASK, payload: newTask });
   }
 
