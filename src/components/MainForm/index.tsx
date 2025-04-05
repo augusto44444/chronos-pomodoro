@@ -8,6 +8,7 @@ import { useTaskContext } from '../../contexts/TaskContenxt/useTaskContext';
 import { getNextCycle } from '../../utils/getNextCycle';
 import { getNextCycleType } from '../../utils/getNextCycleType';
 import { TaskActionTypes } from '../../contexts/TaskContenxt/taskAction';
+import { Tips } from '../tips';
 
 export function MainForm() {
   const { state, dispatch } = useTaskContext();
@@ -43,7 +44,7 @@ export function MainForm() {
     e: React.MouseEvent<HTMLButtonElement, MouseEvent>,
   ) {
     e.preventDefault();
-    dispatch({ type: TaskActionTypes.INTERRUPT_TASK});
+    dispatch({ type: TaskActionTypes.INTERRUPT_TASK });
   }
 
   return (
@@ -60,9 +61,7 @@ export function MainForm() {
       </div>
 
       <div className='formRow'>
-        <p>{`O próximo intervalo é em ${
-          state.secondsRemaining / 60
-        } minutos`}</p>
+        <Tips nextCycleType={nextCycleType} />
       </div>
 
       {state.currentCycle > 0 && (
