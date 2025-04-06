@@ -54,7 +54,7 @@ export function Menu() {
         <HistoryIcon />
       </RouterLink>
       <RouterLink
-        href='/'
+        href='/settings'
         className={menuLink}
         aria-label='configurações'
         title='configurações'
