@@ -35,3 +35,23 @@
   text-align: left;
   padding: 1.6rem;
 }
+
+.thsort {
+  cursor: pointer;
+  transition: all 0.25s ease-in-out;
+}
+
+.thsort:hover {
+  filter: brightness(80%);
+}
+
+.emptyState {
+  font-size: 2.2rem;
+  gap: 1rem;
+  color: var(--text-muted);
+  height: 22rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}

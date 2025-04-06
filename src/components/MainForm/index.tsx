@@ -1,6 +1,6 @@
 import { PlayCircleIcon, StopCircleIcon } from 'lucide-react';
 import { Cycles } from '../Cycles';
-import { DeffaultButton } from '../DefaultButton';
+import { DefaultButton } from '../DefaultButton';
 import { DefaultInput } from '../DefaultInput';
 import { useRef } from 'react';
 import { TaskModel } from '../../models/task.model';
@@ -78,7 +78,7 @@ export function MainForm() {
 
       <div className='formRow'>
         {!state.activeTask ? (
-          <DeffaultButton
+          <DefaultButton
             aria-label='Iniciar nova tarefa'
             title='Iniciar nova tarefa'
             type='submit'
@@ -87,7 +87,7 @@ export function MainForm() {
             key='botao_submit'
           />
         ) : (
-          <DeffaultButton
+          <DefaultButton
             aria-label='Parar tarefa'
             title='Parar tarefa'
             type='button'
