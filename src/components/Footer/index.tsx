@@ -5,7 +5,7 @@ export function Footer() {
   const { footer } = styles;
   return (
     <footer className={footer}>
-      <Link to='/about-pomodoro'>Entenda como funciona a técnica pomodoro</Link>
+      <Link to='/about'>Entenda como funciona a técnica pomodoro</Link>
       <Link to="/">
         Chronos Pomodoro &copy; {new Date().getFullYear()} - Feito com ❤
       </Link>
