@@ -29,7 +29,6 @@ export function TaskContextProvider({ children }: TaskContextProviderProps) {
         type: TaskActionTypes.COMPLETE_TASK,
       });
       worker.terminate();
-
     } else {
       dispatch({
         type: TaskActionTypes.COUNT_DOWN,
@@ -42,6 +41,8 @@ export function TaskContextProvider({ children }: TaskContextProviderProps) {
     if (!state.activeTask) {
       worker.terminate();
     }
+
+    document.title = `${state.formattedSecondsRemaining} - Chronos Pomodoro`;
 
     worker.postMessage(state);
   }, [state, worker]);
